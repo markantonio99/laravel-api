@@ -5,9 +5,10 @@
         <div class="d-flex align-items-center">
              <div class="me-auto py-5">
                <h1> {{$event->title}}
-                <span class="badge badge-warning">{{ (string) $event->category->name }}</span>
                 @if ($event->category)
-                     <span class="badge badge-warning">{{ $event->category->name }}</span>
+                <button type="button" class="btn btn-primary">
+                   <span class="badge badge-light"> {{ $event->category->name }}</span>
+                  </button>
                  @endif
                <p>{{$event->slug}}</p>
              </div>
